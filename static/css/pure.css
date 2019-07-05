@@ -126,7 +126,7 @@ pre {
     margin-top: -15px;
     line-height: 15px;
     margin-left: 15px;
-    font-size: 80%;
+    font-size: 90%;
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     color: #fff;
 }
@@ -142,10 +142,10 @@ pre {
 }
 
 .links a {
-    font-size: 15px;
+    font-size: .8em;
     padding-left: 15px;
     font-family: sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     text-decoration: none;
     color: #fff;
@@ -273,7 +273,7 @@ pre {
         width: 100%;
         position: relative;
         margin: 0;
-        height: 450px;
+        height: 250px;
     }
     .content {
         padding: 1em 1.5em 0;

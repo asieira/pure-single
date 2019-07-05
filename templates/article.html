@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block head_js %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
     <script>
         $(document).ready(function(){
             $(".content").fitVids();
@@ -27,11 +27,13 @@
             <section class="post">
                 <header class="post-header">
                     <h1>{{ article.title }}</h1>
-                        <p class="post-meta">
-                            // under {% for tag in article.tags %}
-                                <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                            {% endfor %}
-                        </p>
+                        {% if article.tags %}
+                            <p class="post-meta">
+                                // under {% for tag in article.tags %}
+                                    <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                                {% endfor %}
+                            </p>
+                        {% endif %}
 			<p class="post-meta">
 			    // {{ article.locale_date }}
 			</p>
@@ -40,7 +42,7 @@
             {{ article.content }}
             <a href="#" class="go-top">Go Top</a>
             {% include 'disqus.html' %}
-            {% include 'footer.html' %}
         </div>
+        {% include 'footer.html' %}
     </div>
 {% endblock  %}

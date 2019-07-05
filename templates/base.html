@@ -43,12 +43,12 @@
     <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure.css">
     {% block head_css %}{% endblock %}
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     {% block head_js %}{% endblock %}
 
     {% if article %}
@@ -71,7 +71,7 @@
                 {%- endif -%}>
                 <div class="cover-body">
                     <header class="header">
-                        <hgroup>
+                        <div>
                             {% if PROFILE_IMG_URL %}
                             <img class="avatar" src="{{ PROFILE_IMG_URL }}">
                             {% endif %}
@@ -82,7 +82,7 @@
                             {% endfor %}
                             {% if DISPLAY_PAGES_ON_MENU %}
                             {% for page in PAGES %}
-                                <p class="links"><a href="{{ SITEURL }}/pages/{{ page.slug }}">{{ page.title }}</a></p>
+                                <p class="links"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></p>
                             {% endfor %}
                             {% endif %}
                                 <p class="social">
@@ -92,7 +92,7 @@
                                     </a>
                             {% endfor %}
                                 </p>
-                        </hgroup>
+                        </div>
                     </header>
                 </div>
             </div>

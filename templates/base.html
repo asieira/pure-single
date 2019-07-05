@@ -43,13 +43,22 @@
     <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure.css">
     {% block head_css %}{% endblock %}
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     {% block head_js %}{% endblock %}
+
+    {% if article %}
+        {% if article.stylesheets %}
+            {% for stylesheet in article.stylesheets %}
+{{ stylesheet }}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+
 </head>
 
 <body>
@@ -117,4 +126,13 @@
     </script>
     {% include 'analytics.html' %}
 </body>
+
+{% if article %}
+    {% if article.javascripts %}
+        {% for javascript in article.javascripts %}
+{{ javascript }}
+        {% endfor %}
+    {% endif %}
+{% endif %}
+
 </html>

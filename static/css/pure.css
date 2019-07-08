@@ -31,6 +31,10 @@ pre {
     box-shadow: 2px 2px 2px #888;
 }
 
+.pure-u {
+    width: 100%;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -268,6 +272,7 @@ pre {
     padding-left: 25%; /* "left col (nav + list)" width */
     position: relative;
 }
+
 @media (max-width: 767px) {
     .sidebar {
         width: 100%;

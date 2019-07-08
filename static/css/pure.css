@@ -278,7 +278,7 @@ pre {
         width: 100%;
         position: relative;
         margin: 0;
-        height: 250px;
+        height: 300px;
     }
     .content {
         padding: 1em 1.5em 0;
@@ -290,10 +290,10 @@ pre {
         background-size: cover;
     }
 
-    .cover-body {
+/*    .cover-body {
         padding-bottom: 5%;
         padding-top: 0;
-    }
+    }*/
 
     .header,
     .header-article {

@@ -135,4 +135,12 @@
     {% endif %}
 {% endif %}
 
+{% if JAVASCRIPTS is string %}
+<script src="{{JAVASCRIPTS}}"></script>
+{% elif JAVASCRIPTS is iterable %}
+    {% for javascript in JAVASCRIPTS %}
+<script src="{{javascript}}"></script>
+    {% endfor %}
+{% endif %}
+
 </html>
